@@ -1,0 +1,194 @@
+/* =================================
+  Base Element Styles
+==================================== */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.6;
+	color: #7a7777;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin: 0px;
+	padding-left: .5em;
+}
+
+p {
+	font-size: .95em;
+	margin-bottom: 1.8em;
+}
+
+
+
+h2,
+h3,
+h4 {
+	margin-top: 0;
+}
+
+h4 {
+	margin-bottom: .4em;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* =================================
+  Base Layout Styles
+==================================== */
+
+.mainHeader,
+.footer-container {
+  /* background: url(https://picsum.photos/888/52);
+	background-size: cover; */
+	color: white;
+  background-color: #000000;
+}
+
+/* ---------------- flexbox and set-up for fixed header and sticky footer -------------- */
+.mainHeader{
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: auto;
+	width: 100%;
+}
+
+.mainNav ul {
+  display: flex;
+  justify-content: center;
+	align-items: center;
+	padding-left: 2em;
+}
+
+.mainNav li:hover,
+.footer-container a:hover {
+	background-color: #444;
+}
+
+.mainNav a,
+.footer-container a {
+	color: white;
+	display: inline-block;
+	margin: inherit;
+	padding:1em ;
+}
+
+/* ---------------- drop-down menus -------------- */
+.navContent {
+	position: absolute;
+	top: 6.8em;
+	overflow: hidden;
+	background-color: #222;
+	max-height: 0;
+}
+
+.navContent li {
+	width: 100%;
+}
+
+.navContent:hover{
+	max-height: 400px;
+}
+
+.navSub ul{
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.navItem:focus {
+ text-decoration: underline;
+}
+
+.navItem:focus ~ .navContent{
+	max-height: 400px;
+}
+
+
+/* ---------------- contents of main page -------------- */
+.mainContainer {
+	padding-top: 90.8px;
+	background: lightblue;
+	margin: 0.1vw auto;
+	flex: 1;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 90%;
+}
+
+
+.content {
+	padding: 1em;
+	margin-top: inherit;
+	margin: 0 auto ;
+	flex-basis: 400px;
+}
+
+
+/* .footer-container{
+	background: url(https://picsum.photos/888/20);
+	background-size: cover;
+	background-color: #cccccc;
+	} */
+
+/* =================================
+  Media Queries
+==================================== */
+@media (max-width: 400px) {
+	.mainHeader {
+		font-size: 0.75em;
+	}
+
+	h2 {
+		font-size: 1.1em;
+	}
+}
+
+@media (min-width: 797px) {
+
+
+.mainHeader {
+	flex-direction: row;
+}
+
+.title {
+	margin-right: 2em;
+}
+
+.main {
+	display: flex;
+}
+
+.mainContainer {
+	padding-top: 51.2px;
+	max-width: 80%;
+
+}
+
+.navContent {
+	top: 3.5em;
+}
+
+
+.primary{
+	flex-grow: 4;
+}
+
+.content {
+	max-width: 40%;
+}
+
+
+
+
+@media (min-width: 1025px) {
+
+}
